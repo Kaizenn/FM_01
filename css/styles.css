@@ -1,7 +1,15 @@
+:root {    
+    --color-primary: hsl(218, 44%, 22%);
+    --color-secondary: hsl(216, 15%, 48%);
+    --color-tertiary: hsl(212, 45%, 89%);
+    --color-white: hsl(0, 0%, 100%);
+    --font-family: "Outfit", sans-serif;
+}
+
 /* Base styles */
 html {
     font-size: 16px;
-    font-family: "Outfit", sans-serif;    
+    font-family: var(--font-family);
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -13,6 +21,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-tertiary);
 }
 
 img {
@@ -20,26 +30,21 @@ img {
     height: auto;
 }
 
-/* Background classes */
-.bg-primary {
-    background-color: hsl(212, 45%, 89%);
-}
-
 /* Color classes */
 .text-white {
-    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
 }
 
 .text-primary {
-    color: hsl(218, 44%, 22%);
+    color: var(--color-primary);
 }
 
 .text-secondary {
-    color: hsl(216, 15%, 48%);
+    color: var(--color-secondary);
 }
 
 .text-tertiary {
-    color: hsl(212, 45%, 89%);
+    color: var(--color-tertiary);
 }
 
 /* text-size classes */
@@ -53,6 +58,12 @@ img {
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.2px;
+}
+
+.text-size-3 {
+    font-size: .75rem; /* 12px */
+    font-weight: 400;
+    line-height: 1;
 }
 
 /* Padding classes */
@@ -113,4 +124,15 @@ img {
     box-shadow: 0rem 0.8rem .3rem -.5rem rgba(0, 0, 0, 0.2);
     text-align: center;
     box-sizing: border-box;
+    background-color: var(--color-white);
+    transition: transform 0.25s ease;
+}
+
+.qr-code-block:hover {
+    transform: translateY(-0.5rem);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+    color: var(--color-dark);
 }
