@@ -131,8 +131,3 @@ img {
 .qr-code-block:hover {
     transform: translateY(-0.5rem);
 }
-
-.attribution a:hover {
-    text-decoration: underline;
-    color: var(--color-dark);
-}
